@@ -29,6 +29,9 @@ services:
         networks:
             - web
 
+    client:
+        image: python:3.6
+
     haproxy:
         build: ./haproxy
         # image: haproxy:1.5.18

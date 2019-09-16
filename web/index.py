@@ -9,8 +9,8 @@ def index():
     for item in request.headers:
         headers += str(item) + "\n </br>"
     return(headers)
-    # return "Hello World!"
 
 
 if __name__ == '__main__':
-    app.run()
+    # Flask supports generating an ssl self signed cert on the fly
+    app.run(host='0.0.0.0',ssl_context='adhoc')
