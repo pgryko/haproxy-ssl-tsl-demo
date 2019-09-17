@@ -31,7 +31,9 @@ services:
 
     client:
         image: python:3.6
-
+        tty: true
+        networks:
+            - web
     haproxy:
         build: ./haproxy
         # image: haproxy:1.5.18
